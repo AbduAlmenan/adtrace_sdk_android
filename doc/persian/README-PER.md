@@ -246,7 +246,7 @@ implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
 <br/>
 
 ```gradle
-implementation 'com.android.installreferrer:installreferrer:1.0'
+implementation 'com.android.installreferrer:installreferrer:1.1.2'
 ```
 
 <br/>

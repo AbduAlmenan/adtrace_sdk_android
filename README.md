@@ -159,7 +159,7 @@ In order to correctly attribute an install of your app to its source, AdTrace ne
 In order to support this in your app, please make sure that you have followed the [Add the SDK to your project](#qs-add-sdk) chapter properly and that you have following line added to your `build.gradle` file:
 
 ```gradle
-implementation 'com.android.installreferrer:installreferrer:1.0'
+implementation 'com.android.installreferrer:installreferrer:1.1.2'
 ```
 
 Also, make sure that you have paid attention to the [Proguard settings](#qs-proguard-settings) chapter and that you have added all the rules mentioned in it, especially the one needed for this feature:
