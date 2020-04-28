@@ -1,3 +1,4 @@
+
 English | [فارسی][per-readme]
 
 ## Summary
@@ -8,6 +9,7 @@ This is the Android SDK of AdTrace™. You can read more about AdTrace™ at [ad
 
 ### Quick start
 
+   * [Example Apps](#qs-example-apps)
    * [Getting started](#qs-getting-started)
       * [Add the SDK to your project](#qs-add-sdk)
       * [Add Google Play Services](#qs-add-gps)
@@ -79,8 +81,14 @@ This is the Android SDK of AdTrace™. You can read more about AdTrace™ at [ad
    * [Is my broadcast receiver capturing the install referrer?](#ts-broadcast-receiver)
    * [Can I trigger an event at application launch?](#ts-event-at-launch)
 
+## Quick start
 
-## <a id="qs-getting-started"></a>Getting started
+### <a id="qs-example-apps"></a>Example apps
+
+- For native use [example-app-java](/example-app-java)
+- For web view use [example-app-webbridge](/example-app-webbridge)
+
+### <a id="qs-getting-started"></a>Getting started
 
 These are the minimal steps required to integrate the AdTrace SDK into your Android project. We are going to assume that you use Android Studio for your Android development and target an Android API level **9 (Gingerbread)** or later.
 
@@ -233,7 +241,7 @@ We recommend using a global android [Application][android_application] class to 
     }
     ```
 
-Replace `{YourAppToken}` with your app token. You can find this in your [dashboard].
+Replace `{YourAppToken}` with your app token. You can find this in your [panel].
 
 Depending on whether you are building your app for testing or for production, you must set `environment` with one of these values:
 
@@ -298,7 +306,7 @@ let adtraceConfig = new AdTraceConfig(yourAppToken, environment);
 AdTrace.onCreate(adtraceConfig);
 ```
 
-Replace `{YourAppToken}` with your app token. You can find this in your [dashboard].
+Replace `{YourAppToken}` with your app token. You can find this in your [panel].
 
 Next, set your `environment` to the corresponding value, depending on whether you are still testing or are in production mode:
 
@@ -395,7 +403,7 @@ Repeat these steps for **every Activity** of your app. Don't forget these steps 
 
 An account manager must activate the AdTrace SDK signature. Contact AdTrace support (info@adtrace.io) if you are interested in using this feature.
 
-If the SDK signature has already been enabled on your account and you have access to App Secrets in your AdTrace Dashboard, please use the method below to integrate the SDK signature into your app.
+If the SDK signature has already been enabled on your account and you have access to App Secrets in your AdTrace panel, please use the method below to integrate the SDK signature into your app.
 
 An App Secret is set by calling `setAppSecret` on your `AdTraceConfig` instance:
 
@@ -710,7 +718,7 @@ AdTrace.appWillOpenUrl(deeplinkUrl);
 
 ### <a id="et-track-event"></a>Track event
 
-You can use AdTrace to track any event in your app. Suppose you want to track every tap on a button. You would have to create a new event token in your [dashboard]. Let's say that event token is `abc123`. In your button's `onClick` method you could then add the following lines to track the click:
+You can use AdTrace to track any event in your app. Suppose you want to track every tap on a button. You would have to create a new event token in your [panel]. Let's say that event token is `abc123`. In your button's `onClick` method you could then add the following lines to track the click:
 
 ```java
 AdTraceEvent event = new AdTraceEvent("abc123");
@@ -748,7 +756,7 @@ AdTrace.trackEvent(event);
 
 ### <a id="cp-overview"></a>Custom parameters overview
 
-In addition to the data points the AdTrace SDK collects by default, you can use the AdTrace SDK to track and add as many custom values as you need (user IDs, product IDs, etc.) to the event or session. Custom parameters are only available as raw data and will **not** appear in your AdTrace dashboard.
+In addition to the data points the AdTrace SDK collects by default, you can use the AdTrace SDK to track and add as many custom values as you need (user IDs, product IDs, etc.) to the event or session. Custom parameters are only available as raw data and will **not** appear in your AdTrace panel.
 
 You should use **callback parameters** for the values you collect for your own internal use, and **partner parameters** for those you share with external partners. If a value (e.g. product ID) is tracked both for internal use and external partner use, we recommend you track it with both callback and partner parameters.
 
@@ -756,7 +764,7 @@ You should use **callback parameters** for the values you collect for your own i
 
 ### <a id="cp-ep-callback"></a>Event callback parameters
 
-You can register a callback URL for your events in your [dashboard]. We will send a GET request to that URL whenever the event is tracked. You can add callback parameters to that event by calling `addCallbackParameter` to the event instance before tracking it. We will then append these parameters to your callback URL.
+You can register a callback URL for your events in your [panel]. We will send a GET request to that URL whenever the event is tracked. You can add callback parameters to that event by calling `addCallbackParameter` to the event instance before tracking it. We will then append these parameters to your callback URL.
 
 
 For example, if you've registered the URL `http://www.example.com/callback`, then you would track an event like this:
@@ -804,7 +812,7 @@ http://www.example.com/callback?key=value&foo=bar
 
 ### <a id="cp-ep-partner"></a>Event partner parameters
 
-You can also add parameters to be transmitted to network partners, which have been activated in your AdTrace dashboard.
+You can also add parameters to be transmitted to network partners, which have been activated in your AdTrace panel.
 
 This works similarly to the callback parameters mentioned above, but can be added by calling the `addPartnerParameter` method on your `AdTraceEvent` instance.
 
@@ -1026,7 +1034,7 @@ AdTrace.resetSessionCallbackParameters();
 
 In the same way that [session callback parameters](#cp-sp-callback) are sent in every event or session of the AdTrace SDK, there are also session partner parameters.
 
-These are transmitted to network partners for all of the integrations activated in your AdTrace [dashboard].
+These are transmitted to network partners for all of the integrations activated in your AdTrace [panel].
 
 The session partner parameters interface is similar to the event partner parameters interface. Instead of adding the key and its value to an event, add it by calling `AdTrace.addSessionPartnerParameter(String key, String value)`:
 
@@ -1546,7 +1554,7 @@ let adid = AdTrace.getAdid();
 
 If you want to use the AdTrace SDK to recognize users whose devices came with your app pre-installed, follow these steps:
 
-- Create a new tracker in your [dashboard].
+- Create a new tracker in your [panel].
 - Open your app delegate and set the default tracker of your config:
 
   <table>
@@ -1578,7 +1586,7 @@ If you want to use the AdTrace SDK to recognize users whose devices came with yo
   </tr>
   </table>
 
-- Replace `{TrackerToken}` with the tracker token you created in step one. Please note that the dashboard displays a tracker URL (including `http://app.adtrace.io/`). In your source code, you should specify only the six or seven-character token and not the entire URL.
+- Replace `{TrackerToken}` with the tracker token you created in step one. Please note that the panel displays a tracker URL (including `http://app.adtrace.io/`). In your source code, you should specify only the six or seven-character token and not the entire URL.
 
 - Build and run your app. You should see a line like the following in your LogCat:
 
@@ -1886,7 +1894,7 @@ If you want to trigger an event after the install, use the [attribution callback
 
 If you want to trigger an event when the app is launched, use the `onCreate` method of the Activity which is started.
 
-[dashboard]:  http://adtrace.io
+[panel]:  http://panel.adtrace.io
 [adtrace.io]: http://adtrace.io
 [en-readme]:  README.md
 [per-readme]:  ./doc/persian/README-PER.md
