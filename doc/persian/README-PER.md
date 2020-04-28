@@ -1,4 +1,5 @@
 
+
 <div dir="rtl" align='right'>فارسی | <a href="../../README.md">English</a></div>
 
 ## <div dir="rtl" align='right'>خلاصه</div>
@@ -13,6 +14,7 @@ SDK اندروید ادتریس. شما برای اطلاعات بیشتر می�
 
 <div dir="rtl" align='right'>
 <ul>
+  <li><a href="#qs-example-apps">برنامه های نمونه</a>
   <li><a href="#qs-getting-started">شروع پیاده سازی</a>
   <ul>
     <li><a href="#qs-add-sdk">افزودن SDK به پروژه</a></li>
@@ -132,7 +134,18 @@ SDK اندروید ادتریس. شما برای اطلاعات بیشتر می�
 </ul>
 </div>
 
-## <div id="qs-getting-started" dir="rtl" align='right'>شروع پیاده سازی</div>
+## <div dir="rtl" align='right'>پیاده سازی فوری</div>
+
+### <div id="qs-example-apps" dir="rtl" align='right'>برنامه های نمونه</div>
+
+<div dir="rtl" align='right'>
+<ul>
+<li>برای پیاده سازی به صورت native میتوانید  از <a href="https://github.com/adtrace/adtrace_sdk_android/tree/master/example-app-java">این مثال</a> استفاده کنید.</li>
+<li>و برای پیاده سازی به صورت web view میتوانید  از <a href="https://github.com/adtrace/adtrace_sdk_android/tree/master/example-app-webbridge">این برنامه</a> استفاده کنید.</li>
+</ul>
+</div>
+
+### <div id="qs-getting-started" dir="rtl" align='right'>شروع پیاده سازی</div>
 
 <div dir="rtl" align='right'>
 موارد زیر حداقل موارد لازم برای تعامل SDK ادتریس درون پروژه اندروید میباشد. در نظر ما شما برای توسعه اندروید از Android Studio و API حداقل <strong>9 (Gingerbread)</strong> یا به بالا را استفاده میکنید.
