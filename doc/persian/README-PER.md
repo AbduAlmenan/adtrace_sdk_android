@@ -2,6 +2,15 @@
 
 <div dir="rtl" align='right'>فارسی | <a href="../../README.md">English</a></div>
 
+<p align="center"><a href="https://adtrace.io" target="_blank" rel="noopener noreferrer"><img width="100" src="http://adtrace.io/fa/wp-content/uploads/2019/02/logo.png" alt="Adtrace logo"></a></p>
+
+<p align="center">
+  <a href='https://bintray.com/mortezakhosravinejad/adtrace-test/android-sdk/1.0.3/link'><img src='https://api.bintray.com/packages/mortezakhosravinejad/adtrace-test/android-sdk/images/download.svg?version=1.0.3'></a>
+  <a href='https://opensource.org/licenses/MIT'><img src='https://img.shields.io/badge/License-MIT-green.svg'></a>
+</p>
+
+<h2 align="center">Adtrace</h2>
+
 ## <div dir="rtl" align='right'>خلاصه</div>
 
 <div dir="rtl" align='right'>
