@@ -9,8 +9,6 @@
   <a href='https://opensource.org/licenses/MIT'><img src='https://img.shields.io/badge/License-MIT-green.svg'></a>
 </p>
 
-<h2 align="center">Adtrace</h2>
-
 ## <div dir="rtl" align='right'>خلاصه</div>
 
 <div dir="rtl" align='right'>
