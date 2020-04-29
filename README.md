@@ -7,8 +7,6 @@ English | [فارسی][per-readme]
   <a href='https://opensource.org/licenses/MIT'><img src='https://img.shields.io/badge/License-MIT-green.svg'></a>
 </p>
 
-<h2 align="center">Adtrace</h2>
-
 ## Summary
 
 This is the Android SDK of AdTrace™. You can read more about AdTrace™ at [adtrace.io].
