@@ -1,5 +1,3 @@
-
-
 <div dir="rtl" align='right'>فارسی | <a href="../../README.md">English</a></div>
 
 <p align="center"><a href="https://adtrace.io" target="_blank" rel="noopener noreferrer"><img width="100" src="http://adtrace.io/fa/wp-content/uploads/2019/02/logo.png" alt="Adtrace logo"></a></p>
@@ -1700,7 +1698,7 @@ listener ها هنگامی فراخوانده میشوند که SDK تلاش ب�
 
 <div dir="rtl" align='right'>
 <ul>
-<li><code>willRetry</code> یک boolean ای  تلاش مجدد برای ارسال داده را نشان میدهد ای خیر.</li>
+<li><code>willRetry</code> یک boolean ای  تلاش مجدد برای ارسال داده را نشان میدهد .</li>
 </ul>
 </div>
 
