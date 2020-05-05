@@ -205,8 +205,6 @@ implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->
 ```
 
 <br/>
@@ -217,6 +215,17 @@ implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+```
+
+<br/>
+<div dir="rtl" align='right'>
+و اگر میخواهید <a href="#af-location">موقعیت مکانی</a> کاربر سمت سرور ارسال شود مجوزهای زیر را نیز اضافه نمایید:
+</div>
+<br/>
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->
 ```
 
 ### <div id="qs-proguard-settings" dir="rtl" align='right'>تنظیمات Proguard</div>
