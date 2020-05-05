@@ -131,14 +131,19 @@ Please add the following permissions, which the AdTrace SDK needs, if they are n
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->
 ```
 
 If you are **not targeting the Google Play Store**, please also add the following permission:
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+```
+
+And if your willing to send user's [location](#af-location) to our backend, please also add these following permissions:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->
 ```
 
 ### <a id="qs-proguard-settings"></a>Proguard settings
