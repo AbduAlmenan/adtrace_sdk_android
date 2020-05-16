@@ -1,4 +1,4 @@
--keep class com.adjust.sdk.** { *; }
+-keep public class io.adtrace.sdk.** { *; }
 -keep class com.google.android.gms.common.ConnectionResult {
     int SUCCESS;
 }
